@@ -60,21 +60,15 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let filme = films[indexPath.row]
-        let standardImage = UIImage(systemName: "xmark")
         let reuseCell = "reuseCellFilm"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseCell, for: indexPath) as! CellFilm
         
         cell.titleFilmLabel.text = filme.title
         cell.descriptionFilmLabel.text = filme.description
-        if filme.image != nil {
-            cell.imageFilmView.image = filme.image
-            cell.imageFilmView.layer.cornerRadius = cell.imageFilmView.frame.height/2
-            cell.imageFilmView.clipsToBounds = true
-        } else {
-            cell.imageFilmView.image = standardImage
-        }
-        
-        
+        cell.imageFilmView.image = filme.image
+        cell.imageFilmView.layer.cornerRadius = cell.imageFilmView.frame.height/2
+        cell.imageFilmView.clipsToBounds = true
+
         return cell
     }
     
@@ -87,6 +81,6 @@ class ViewController: UITableViewController {
             }
         }
     }
-
+    
 }
 

@@ -8,6 +8,7 @@
 import UIKit
 
 class Film {
+    
     var title: String!
     var description: String!
     var image: UIImage?
@@ -15,11 +16,18 @@ class Film {
     init(title: String, description: String) {
         self.title = title
         self.description = description
+        self.image = UIImage(systemName: "xmark")
     }
     
     init(title: String, description: String, image: String) {
         self.title = title
         self.description = description
-        self.image = UIImage(named: image)
+        
+        if let image = UIImage(named: image){
+            self.image = image
+        } else {
+            self.image = UIImage(systemName: "xmark")
+        }
     }
+    
 }

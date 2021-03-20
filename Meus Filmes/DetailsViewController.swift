@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    
     @IBOutlet weak var filmImageView: UIImageView!
     @IBOutlet weak var filmTitleLabel: UILabel!
     @IBOutlet weak var navigationDetailsView: UINavigationItem!
@@ -22,15 +22,4 @@ class DetailsViewController: UIViewController {
         filmImageView.image = film.image
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
