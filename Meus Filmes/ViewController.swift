@@ -60,18 +60,20 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let filme = filmes[indexPath.row]
-        
+        let standardImage = UIImage(systemName: "xmark")
         let reuseCell = "reuseCellFilm"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseCell, for: indexPath) as! CellFilm
         
         cell.titleFilmLabel.text = filme.title
         cell.descriptionFilmLabel.text = filme.description
-        cell.imageFilmView.image = filme.image
+        if filme.image != nil {
+            cell.imageFilmView.image = filme.image
+        } else {
+            cell.imageFilmView.image = standardImage
+        }
+        
         
         return cell
-        
-        
-        
     }
 
 }
