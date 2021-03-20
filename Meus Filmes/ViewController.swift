@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UITableViewController {
 
-    var filmes: [Filme] = []
+    var films: [Film] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,37 +17,37 @@ class ViewController: UITableViewController {
     }
     
     func populate(){
-        var filme: Filme
+        var film: Film
         
-        filme = Filme(title: "007 - Spectre", description: "Descrição 1")
-        filmes.append(filme)
+        film = Film(title: "007 - Spectre", description: "Descrição 1")
+        films.append(film)
         
-        filme = Filme(title: "Star Wars", description: "Descrição 2", image: "filme2")
-        filmes.append(filme)
+        film = Film(title: "Star Wars", description: "Descrição 2", image: "filme2")
+        films.append(film)
         
-        filme = Filme(title: "Impacto Mortal", description: "Descrição 3")
-        filmes.append(filme)
+        film = Film(title: "Impacto Mortal", description: "Descrição 3")
+        films.append(film)
         
-        filme = Filme(title: "Deadpool", description: "Descrição 4")
-        filmes.append(filme)
+        film = Film(title: "Deadpool", description: "Descrição 4")
+        films.append(film)
         
-        filme = Filme(title: "O Regresso", description: "Descrição 5", image: "filme5")
-        filmes.append(filme)
+        film = Film(title: "O Regresso", description: "Descrição 5", image: "filme5")
+        films.append(film)
         
-        filme = Filme(title: "A herdeira", description: "Descrição 6")
-        filmes.append(filme)
+        film = Film(title: "A herdeira", description: "Descrição 6")
+        films.append(film)
         
-        filme = Filme(title: "Caçadores de emoção", description: "Descrição 7")
-        filmes.append(filme)
+        film = Film(title: "Caçadores de emoção", description: "Descrição 7")
+        films.append(film)
         
-        filme = Filme(title: "Regresso do mal", description: "Descrição 8")
-        filmes.append(filme)
+        film = Film(title: "Regresso do mal", description: "Descrição 8")
+        films.append(film)
         
-        filme = Filme(title: "Tarzan", description: "Descrição 9")
-        filmes.append(filme)
+        film = Film(title: "Tarzan", description: "Descrição 9")
+        films.append(film)
         
-        filme = Filme(title: "Hardcore", description: "Descrição 10", image: "filme10")
-        filmes.append(filme)
+        film = Film(title: "Hardcore", description: "Descrição 10", image: "filme10")
+        films.append(film)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -55,11 +55,11 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filmes.count
+        return films.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let filme = filmes[indexPath.row]
+        let filme = films[indexPath.row]
         let standardImage = UIImage(systemName: "xmark")
         let reuseCell = "reuseCellFilm"
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseCell, for: indexPath) as! CellFilm
@@ -76,6 +76,16 @@ class ViewController: UITableViewController {
         
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "detailsFilmSegue"{
+            if let indexPath = tableView.indexPathForSelectedRow{
+                let selectFilm = films[indexPath.row]
+                let viewDestiny = segue.destination as! DetailsViewController
+                viewDestiny.film = selectFilm
+            }
+        }
     }
 
 }
