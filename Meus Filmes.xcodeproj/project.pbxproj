@@ -14,6 +14,7 @@
 		DFA7DFF6260670B200E3C68D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFA7DFF5260670B200E3C68D /* Assets.xcassets */; };
 		DFA7DFF9260670B200E3C68D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFA7DFF7260670B200E3C68D /* LaunchScreen.storyboard */; };
 		DFA7E0022606731300E3C68D /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA7E0012606731300E3C68D /* Filme.swift */; };
+		DFA7E00526067C4D00E3C68D /* CellFilm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA7E00426067C4D00E3C68D /* CellFilm.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DFA7DFF8260670B200E3C68D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFA7DFFA260670B200E3C68D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFA7E0012606731300E3C68D /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
+		DFA7E00426067C4D00E3C68D /* CellFilm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFilm.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				DFA7DFF0260670AF00E3C68D /* ViewController.swift */,
 				DFA7E0012606731300E3C68D /* Filme.swift */,
 				DFA7DFF2260670AF00E3C68D /* Main.storyboard */,
+				DFA7E00426067C4D00E3C68D /* CellFilm.swift */,
 				DFA7DFF5260670B200E3C68D /* Assets.xcassets */,
 				DFA7DFF7260670B200E3C68D /* LaunchScreen.storyboard */,
 				DFA7DFFA260670B200E3C68D /* Info.plist */,
@@ -143,6 +146,7 @@
 				DFA7DFF1260670AF00E3C68D /* ViewController.swift in Sources */,
 				DFA7DFED260670AF00E3C68D /* AppDelegate.swift in Sources */,
 				DFA7DFEF260670AF00E3C68D /* SceneDelegate.swift in Sources */,
+				DFA7E00526067C4D00E3C68D /* CellFilm.swift in Sources */,
 				DFA7E0022606731300E3C68D /* Filme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
