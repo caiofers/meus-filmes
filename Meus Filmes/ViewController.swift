@@ -68,6 +68,8 @@ class ViewController: UITableViewController {
         cell.descriptionFilmLabel.text = filme.description
         if filme.image != nil {
             cell.imageFilmView.image = filme.image
+            cell.imageFilmView.layer.cornerRadius = cell.imageFilmView.frame.height/2
+            cell.imageFilmView.clipsToBounds = true
         } else {
             cell.imageFilmView.image = standardImage
         }
