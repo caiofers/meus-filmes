@@ -19,22 +19,34 @@ class ViewController: UITableViewController {
     func populate(){
         var filme: Filme
         
-        filme = Filme(title: "Filme 1", description: "Descrição 1")
+        filme = Filme(title: "007 - Spectre", description: "Descrição 1")
         filmes.append(filme)
         
-        filme = Filme(title: "Filme 2", description: "Descrição 2")
+        filme = Filme(title: "Star Wars", description: "Descrição 2", image: "filme2")
         filmes.append(filme)
         
-        filme = Filme(title: "Filme 3", description: "Descrição 3")
+        filme = Filme(title: "Impacto Mortal", description: "Descrição 3")
         filmes.append(filme)
         
-        filme = Filme(title: "Filme 4", description: "Descrição 4")
+        filme = Filme(title: "Deadpool", description: "Descrição 4")
         filmes.append(filme)
         
-        filme = Filme(title: "Filme 5", description: "Descrição 5")
+        filme = Filme(title: "O Regresso", description: "Descrição 5", image: "filme5")
         filmes.append(filme)
         
-        filme = Filme(title: "Filme 6", description: "Descrição 6")
+        filme = Filme(title: "A herdeira", description: "Descrição 6")
+        filmes.append(filme)
+        
+        filme = Filme(title: "Caçadores de emoção", description: "Descrição 7")
+        filmes.append(filme)
+        
+        filme = Filme(title: "Regresso do mal", description: "Descrição 8")
+        filmes.append(filme)
+        
+        filme = Filme(title: "Tarzan", description: "Descrição 9")
+        filmes.append(filme)
+        
+        filme = Filme(title: "Hardcore", description: "Descrição 10", image: "filme10")
         filmes.append(filme)
     }
     
@@ -53,6 +65,7 @@ class ViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseCell, for: indexPath)
         
         cell.textLabel?.text = filme.title
+        cell.imageView?.image = filme.image
         
         return cell
         
